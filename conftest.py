@@ -11,7 +11,7 @@ def driver():
         "appPackage": "",
         "appWaitActivity": ""
     }
-    print("\nstart browser for test..")
+    print("\nstart app for test..")
     driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_cap)
 
     yield driver
