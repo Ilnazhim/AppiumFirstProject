@@ -1,5 +1,6 @@
 import time
-
+import pytest
+from pages.forms import FormsPage
 from pages.register_page import RegisterPage
 
 # class Testregistrations:
@@ -21,4 +22,14 @@ def test_register_with_auto_and_onboard(driver):
     rp.add_auto()
     rp.onboarding()
     rp.close_popap()
+
+# class TestForms:
+def test_send_the_form_no_zhk(driver):
+    print("\nNo ZhK form")
+    rp = RegisterPage(driver)
+    rp.autorization()
+
+    fp = FormsPage(driver)
+    fp.fill_the_form_no_zhk()
+    fp.send_the_form()
 

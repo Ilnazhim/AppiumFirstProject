@@ -16,3 +16,5 @@ def driver():
 
     yield driver
 
+    driver.quit()
+    print("\nclose app..")
