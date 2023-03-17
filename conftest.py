@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from appium import webdriver
 
@@ -16,5 +18,6 @@ def driver():
 
     yield driver
 
+    time.sleep(3)
     driver.quit()
     print("\nclose app..")

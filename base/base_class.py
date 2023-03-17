@@ -11,9 +11,10 @@ class BaseClass:
         self.driver = driver
 
     def do_scroll(self):
-        touch = TouchAction(self.driver)
-        touch.press(x=500, y=1700).move_to(x=500, y=500).release().perform()
-
+        size = self.driver.get_window_size()
+        startx, starty = int(size['width']) * 0.5, int(size['height']) * 0.8
+        endx, endy = int(size['width']) * 0.5, int(size['height']) * 0.2
+        self.driver.swipe(startx, starty, endx, endy, 300)
 
     def do_swipe(self):
         size = self.driver.get_window_size()

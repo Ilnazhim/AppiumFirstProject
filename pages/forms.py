@@ -75,7 +75,8 @@ class FormsPage(BaseClass):
         self.input_no_zhk_input_mail()
         self.input_no_zhk_input_adress()
         self.input_no_zhk_input_zhk()
-        self.driver.swipe(500, 1700, 500, 500, 300)
+        self.do_scroll()
+
 
     def send_the_form(self):
         self.click_no_zhk_button_send()
