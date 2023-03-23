@@ -1,0 +1,20 @@
+
+start app for test..
+
+Registration
+Click Enter button
+Input number
+Input Town
+Input Street
+Input number of Appartament
+Input Name
+Click button Add Auto
+Input Auto number
+Click button Add Else Auto
+Click button Delete Auto
+Click button Save Auto
+Click button See Onbording
+Click close_popap_otzyv
+Привет, сосед!
+
+close app..

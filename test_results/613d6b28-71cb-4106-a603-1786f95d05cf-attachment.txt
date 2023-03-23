@@ -1,0 +1,14 @@
+
+start app for test..
+Click Enter button
+Input number 89191153292
+Click burger_menu
+Click term_use
+Click back_button_burger_menu
+Click burger_menu
+Click policy
+Click back_button_burger_menu
+Click burger_menu
+Click rate_app
+
+close app..

@@ -53,11 +53,12 @@ def test_terms_of_use(driver):
     bp = BurgerPage(driver)
     bp.open_burger_menu()
     bp.see_terms()
-
+    bp.open_burger_menu()
+    bp.see_policy()
+    bp.open_burger_menu()
+    bp.see_rate_app()
 
 # def test_see_raiting_zhk(driver):
 #     mp = MapPage(driver)
 #     mp.open_map()
 #     mp.see_raiting()
-
-

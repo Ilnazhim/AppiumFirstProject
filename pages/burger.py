@@ -1,4 +1,6 @@
 import datetime
+
+import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver import Keys, ActionChains
@@ -12,7 +14,9 @@ from base.base_class import BaseClass
 class BurgerPage(BaseClass):
 
     # locators
-    burger_menu =  "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup"
+    burger_menu =  "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup"
+    # burger_menu = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]"
+
     premium_subscription = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
 
     #Жилые комплексы
@@ -35,22 +39,27 @@ class BurgerPage(BaseClass):
     policy_text = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView"
     term_use = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]/android.widget.TextView"
     term_use_text = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView"
+    back_button_burger_menu = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup"
+
 
     #Getters
     def get_burger_menu(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.ID, self.burger_menu)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.burger_menu)))
 
     def get_see_instructions(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.ID, self.see_instructions)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.see_instructions)))
 
     def get_rate_app(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.ID, self.rate_app)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.rate_app)))
 
     def get_policy(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.policy)))
 
     def get_term_use(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.ID, self.term_use)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.term_use)))
+
+    def get_back_button_burger_menu(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.back_button_burger_menu)))
 
 
     #Actions
@@ -74,27 +83,38 @@ class BurgerPage(BaseClass):
         self.get_term_use().click()
         print("Click term_use")
 
+    def click_back_button_burger_menu(self):
+        self.get_back_button_burger_menu().click()
+        print("Click back_button_burger_menu")
 
     #Metods
     def open_burger_menu(self):
-        time.sleep(1)
-        self.click_burger_menu()
+        with allure.step("open_burger_menu"):
+            time.sleep(1)
+            self.click_burger_menu()
 
     def see_instructions_burger(self):
-        self.click_see_instructions()
-
+        with allure.step("see_instructions_burger"):
+            self.click_see_instructions()
 
     def see_rate_app(self):
-        self.click_rate_app()
-        get_rate_text = AppiumBy.XPATH, self.rate_sosedi_text
-        self.assert_element_has_text(get_rate_text, text="Sosedi")
+        with allure.step("see_rate_app"):
+            self.click_rate_app()
+            get_rate_text = AppiumBy.XPATH, self.rate_sosedi_text
+            self.assert_element_has_text(get_rate_text, text="Sosedi")
 
     def see_policy(self):
-        self.click_policy()
-        get_policy_text = AppiumBy.XPATH, self.policy_text
-        self.assert_element_has_text(get_policy_text, text="Политика")
+        with allure.step("see_policy"):
+            self.do_scroll()
+            self.click_policy()
+            get_policy_text = AppiumBy.XPATH, self.policy_text
+            self.assert_element_has_text(get_policy_text, text="Политика")
+            self.click_back_button_burger_menu()
 
     def see_terms(self):
-        self.click_term_use()
-        get_term_text = AppiumBy.XPATH, self.term_use_text
-        self.assert_element_has_text(get_term_text, text="Условия")
+        with allure.step("see_terms"):
+            self.do_scroll()
+            self.click_term_use()
+            get_term_text = AppiumBy.XPATH, self.term_use_text
+            self.assert_element_has_text(get_term_text, text="Пользовательское")
+            self.click_back_button_burger_menu()

@@ -1,0 +1,9 @@
+
+start app for test..
+
+Autorization
+Click Enter button
+Input number 89191153292
+Привет, сосед!
+
+close app..

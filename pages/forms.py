@@ -1,4 +1,6 @@
 import datetime
+
+import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver import Keys, ActionChains
@@ -72,19 +74,18 @@ class FormsPage(BaseClass):
         self.get_no_zhk_button_send().click()
         print("Click no_zhk_button_send")
 
-
-
     #Metods
     def fill_the_form_no_zhk(self):
-        self.click_no_zhk()
-        self.input_no_zhk_input_name()
-        self.input_no_zhk_input_mail()
-        self.input_no_zhk_input_adress()
-        self.input_no_zhk_input_zhk()
-        self.do_scroll()
-        self.click_no_zhk_button_send()
-        time.sleep(3)
-        get_first_page_text =AppiumBy.XPATH, self.first_page_text
-        self.assert_element_has_text(get_first_page_text, text="Экосистема")
-        print("Экосистема SosediService для комфортной жизни")
+        with allure.step("fill_the_form_no_zhk"):
+            self.click_no_zhk()
+            self.input_no_zhk_input_name()
+            self.input_no_zhk_input_mail()
+            self.input_no_zhk_input_adress()
+            self.input_no_zhk_input_zhk()
+            self.do_scroll()
+            self.click_no_zhk_button_send()
+            time.sleep(3)
+            get_first_page_text =AppiumBy.XPATH, self.first_page_text
+            self.assert_element_has_text(get_first_page_text, text="Экосистема")
+            print("Экосистема SosediService для комфортной жизни")
 

@@ -1,4 +1,6 @@
 import datetime
+
+import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver import Keys, ActionChains
@@ -43,9 +45,7 @@ class AutorizationPage(BaseClass):
 
     #Metods
     def autorisation(self):
-        self.click_button_enter()
-        self.input_input_autorization_number()
-        self.click_button_next_1()
-
-
-
+        with allure.step("autorisation"):
+            self.click_button_enter()
+            self.input_input_autorization_number()
+            self.click_button_next_1()

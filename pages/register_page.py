@@ -1,4 +1,6 @@
 import datetime
+
+import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver import Keys, ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
@@ -199,50 +201,56 @@ class RegisterPage(BaseClass):
 
     #Metods
     def registration(self):
-        self.click_button_enter()
-        self.input_input_new_number()
-        self.click_button_next_1()
+        with allure.step("registration"):
+            self.click_button_enter()
+            self.input_input_new_number()
+            self.click_button_next_1()
 
     def base_register(self):
-        time.sleep(5)
-        self.input_input_town()
-        self.click_button_next_2()
-        time.sleep(1)
-        self.input_input_street()
-        self.click_button_next_3()
-        self.click_button_next_4()
-        time.sleep(1)
-        self.input_input_appart()
-        self.click_button_next_5()
-        time.sleep(1)
-        self.input_input_name()
-        self.click_button_next_6()
+        with allure.step("base_register"):
+            time.sleep(5)
+            self.input_input_town()
+            self.click_button_next_2()
+            time.sleep(1)
+            self.input_input_street()
+            self.click_button_next_3()
+            self.click_button_next_4()
+            time.sleep(1)
+            self.input_input_appart()
+            self.click_button_next_5()
+            time.sleep(1)
+            self.input_input_name()
+            self.click_button_next_6()
 
     def no_auto_no_onboard(self):
-        self.click_button_no_auto()
-        self.click_button_no_onboard()
+        with allure.step("no_auto_no_onboard"):
+            self.click_button_no_auto()
+            self.click_button_no_onboard()
 
     def add_auto(self):
-        self.click_button_add_auto()
-        self.input_input_auto_number()
-        self.click_button_add_else_auto_number()
-        self.click_button_delete_auto()
-        self.click_button_save_auto()
+        with allure.step("add_auto"):
+            self.click_button_add_auto()
+            self.input_input_auto_number()
+            self.click_button_add_else_auto_number()
+            self.click_button_delete_auto()
+            self.click_button_save_auto()
 
     def onboarding(self):
-        time.sleep(1)
-        self.click_button_see_onboard()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
-        self.click_next_board()
+        with allure.step("onboarding"):
+            time.sleep(1)
+            self.click_button_see_onboard()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
+            self.click_next_board()
 
     def close_popap(self):
-        self.click_close_popap_otzyv()
+        with allure.step("close_popap"):
+            self.click_close_popap_otzyv()
