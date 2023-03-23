@@ -194,7 +194,7 @@ class RegisterPage(BaseClass):
 
     def click_close_popap_otzyv(self):
         self.get_close_popap_otzyv().click()
-        print("Click button No Onbording")
+        print("Click close_popap_otzyv")
 
 
     #Metods
@@ -243,8 +243,6 @@ class RegisterPage(BaseClass):
         self.click_next_board()
         self.click_next_board()
         self.click_next_board()
-
-
 
     def close_popap(self):
         self.click_close_popap_otzyv()
