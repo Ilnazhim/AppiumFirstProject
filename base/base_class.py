@@ -39,6 +39,11 @@ class BaseClass:
             error.args += ('Element doesn\'t have relevant text',)
             raise
 
+    def is_element_displayed(self, element):
+        WebDriverWait(self.driver, 120).until(EC.presence_of_element_located(element))
+        assert self.driver.find_element(*element).is_displayed() is True
+        return self.driver.find_element(*element)
+
     # def hover(self, element, click=False, ):
     #     action = ActionChains(self.driver)
     #     action.move_to_element(element)

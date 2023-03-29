@@ -38,7 +38,7 @@ class MainPage(BaseClass):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.search_car)))
 
     def get_search_neighbor(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.get_search_neighbor)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.search_neighbor)))
 
     def get_loud_noise(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.loud_noise)))

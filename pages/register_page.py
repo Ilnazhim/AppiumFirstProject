@@ -56,6 +56,9 @@ class RegisterPage(BaseClass):
     def get_input_town(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.input_town)))
 
+    def get_choose_town(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.choose_town)))
+
     def get_button_next_2(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_next_2)))
 
@@ -126,11 +129,15 @@ class RegisterPage(BaseClass):
         self.get_button_next_1().click()
 
     def input_input_town(self):
-        self.get_input_town().send_keys("Челябинск")
+        self.get_input_town().send_keys("Челяб")
         print("Input Town")
 
     def click_button_next_2(self):
         self.get_button_next_2().click()
+
+    def click_choose_town(self):
+        self.get_choose_town().click()
+        print("Сhoose_town")
 
     def input_input_street(self):
         self.get_input_street().send_keys("Рязанская улица, 20")
@@ -210,6 +217,7 @@ class RegisterPage(BaseClass):
         with allure.step("base_register"):
             time.sleep(5)
             self.input_input_town()
+            self.click_choose_town()
             self.click_button_next_2()
             time.sleep(1)
             self.input_input_street()

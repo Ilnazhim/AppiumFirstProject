@@ -4,6 +4,39 @@ from pages.main import MainPage
 from pages.register_page import RegisterPage
 
 
+def test_send_help_way_house(driver):
+    print("\nTest way to house")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
+
+    mp = MainPage(driver)
+    mp.click_get_on_the_way()
+
+    hp = Help4Page(driver)
+    hp.open_way_to_house()
+
+    mp = MainPage(driver)
+    mp.click_get_on_the_way()
+
+    hp = Help4Page(driver)
+    hp.open_way_from_house()
+
+
+def test_send_help_way_from_house(driver):
+    print("\nTest way from house")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
+
+    mp = MainPage(driver)
+    mp.click_get_on_the_way()
+
+    hp = Help4Page(driver)
+    hp.open_way_from_house()
+
+    mp = MainPage(driver)
+    mp.confirm_main_page()
+
+
 def test_search_owner_of_car(driver):
     print("\nTest cars owner")
     rp = AuthorizationPage(driver)
@@ -20,3 +53,33 @@ def test_search_owner_of_car(driver):
     mp.confirm_main_page()
 
 
+def test_search_neighbor(driver):
+    print("\nTest search neighbor")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
+
+    mp = MainPage(driver)
+    mp.click_search_neighbor()
+
+    hp = Help4Page(driver)
+    hp.open_search_neighbor()
+    hp.neighbor_found()
+
+    mp = MainPage(driver)
+    mp.confirm_main_page()
+
+
+def test_loud_noise_neighbor(driver):
+    print("\nTest loud noise")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
+
+    mp = MainPage(driver)
+    mp.click_loud_noise()
+
+    hp = Help4Page(driver)
+    hp.open_search_neighbor()
+    hp.neighbor_loud_noise()
+
+    mp = MainPage(driver)
+    mp.confirm_main_page()
