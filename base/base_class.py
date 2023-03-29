@@ -1,9 +1,6 @@
-import time
-
-from appium.webdriver.common.touch_action import TouchAction
-from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 
 class BaseClass:
 
