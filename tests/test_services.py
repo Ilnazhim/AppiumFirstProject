@@ -1,12 +1,12 @@
-from pages.autorization import AutorizationPage
+from pages.authorization_page import AuthorizationPage
 from pages.main import MainPage
 from pages.services_page import ServicesPage
 
 
 def test_services_rent_apartment(driver):
-    print("Test rent apartment")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
+    print("\nTest rent apartment")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -20,9 +20,9 @@ def test_services_rent_apartment(driver):
 
 
 def test_services_rent_auto(driver):
-    print("Test rent auto")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
+    print("\nTest rent auto")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -36,9 +36,9 @@ def test_services_rent_auto(driver):
 
 
 def test_services_sell_apartment(driver):
-    print("Test sell apartment")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
+    print("\nTest sell apartment")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -52,9 +52,9 @@ def test_services_sell_apartment(driver):
 
 
 def test_services_sell_park_place(driver):
-    print("Test sell park place")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
+    print("\nTest sell park place")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -68,9 +68,9 @@ def test_services_sell_park_place(driver):
 
 
 def test_services_food_delivery(driver):
-    print("Test food delivery")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
+    print("\nTest food delivery")
+    rp = AuthorizationPage(driver)
+    rp.authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()

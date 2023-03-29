@@ -1,4 +1,6 @@
 import datetime
+
+import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver import Keys, ActionChains
@@ -26,29 +28,13 @@ class MainPage(BaseClass):
     def get_button_add_services(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_add_services)))
 
-    def get_button_raiting(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_raiting)))
-
-    def get_close_local(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.ID, self.close_local)))
-
-    def get_close_popap_local2(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.close_popap_local2)))
-
-
+    def get_burger_menu(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.burger_menu)))
 
     #Actions
-    def click_button_raiting(self):
-        self.get_button_raiting().click()
-        print("Click button_raiting")
-
-    def click_close_local(self):
-        self.get_close_local().click()
-        print("Click close_local")
-
-    def click_close_popap_local2(self):
-        self.get_close_popap_local2().click()
-        print("Click close_popap_local2")
+    def click_burger_menu(self):
+        self.get_burger_menu().click()
+        print("Click burger_menu")
 
     def click_button_add_services(self):
         self.get_button_add_services().click()
@@ -63,3 +49,8 @@ class MainPage(BaseClass):
 
     def add_new_service(self):
         self.click_button_add_services()
+
+    def open_burger_menu(self):
+        with allure.step("open_burger_menu"):
+            time.sleep(1)
+            self.click_burger_menu()

@@ -14,9 +14,6 @@ from base.base_class import BaseClass
 class BurgerPage(BaseClass):
 
     # locators
-    burger_menu =  "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup"
-    # burger_menu = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]"
-
     premium_subscription = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView"
 
     #Жилые комплексы
@@ -43,9 +40,8 @@ class BurgerPage(BaseClass):
 
 
     #Getters
-    def get_burger_menu(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.burger_menu)))
-
+    def get_feedback_dev(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.feedback_dev)))
 
     def get_see_instructions(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.see_instructions)))
@@ -64,9 +60,9 @@ class BurgerPage(BaseClass):
 
 
     #Actions
-    def click_burger_menu(self):
-        self.get_burger_menu().click()
-        print("Click burger_menu")
+    def click_feedback_dev(self):
+        self.get_feedback_dev().click()
+        print("Click feedback_dev")
 
     def click_see_instructions(self):
         self.get_see_instructions().click()
@@ -89,10 +85,9 @@ class BurgerPage(BaseClass):
         print("Click back_button_burger_menu")
 
     #Metods
-    def open_burger_menu(self):
+    def open_feedback_form(self):
         with allure.step("open_burger_menu"):
-            time.sleep(1)
-            self.click_burger_menu()
+            self.click_feedback_dev()
 
     def see_instructions_burger(self):
         with allure.step("see_instructions_burger"):
