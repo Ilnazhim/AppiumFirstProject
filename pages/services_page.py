@@ -30,9 +30,6 @@ class ServicesPage(BaseClass):
     add_food = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.widget.TextView[1]"
     cake = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView"
 
-    # services
-    button_add_services = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup"
-
     # feedback
     feedback_button = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup/android.widget.TextView[2]"
 
@@ -49,9 +46,6 @@ class ServicesPage(BaseClass):
     button_service_well_done = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView"
 
     #Getters
-    def get_button_add_services(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_add_services)))
-
     # rent
     def get_add_rent(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.add_rent)))
@@ -124,10 +118,6 @@ class ServicesPage(BaseClass):
 
 
     #Actions
-    def click_button_add_services(self):
-        self.get_button_add_services().click()
-        print("Click button_add_services")
-
     # rent
     def click_add_rent(self):
         self.get_add_rent().click()
@@ -135,7 +125,7 @@ class ServicesPage(BaseClass):
 
     def click_rent_apartament(self):
         self.get_rent_apartament().click()
-        print("Click rent_apartament")
+        print("Click rent_apartment")
 
     def click_rent_auto(self):
         self.get_rent_auto().click()
@@ -220,19 +210,48 @@ class ServicesPage(BaseClass):
 
 
     #Metods
-    def add_new_service(self):
-        self.click_button_add_services()
-
-    def add_rent_apartament(self):
+    """Аренда квартиры студии"""
+    def add_rent_apartment(self):
         self.click_add_rent()
-        time.sleep(3)
+        time.sleep(1)
         self.click_rent_apartament()
         self.click_choose_studia()
         self.input_input_square("93")
         self.click_button_next()
         self.input_input_name_services("Аренда студии автотест")
 
+    """Аренда автомобиля"""
+    def add_rent_auto(self):
+        self.click_add_rent()
+        time.sleep(1)
+        self.click_rent_auto()
+        self.input_input_name_services("Аренда личного автомобиля автотест")
 
+    """Продажа квартиры студии"""
+    def add_sell_apartment(self):
+        self.click_add_sell()
+        time.sleep(1)
+        self.click_sell_apartament()
+        self.click_choose_studia()
+        self.input_input_square("93")
+        self.click_button_next()
+        self.input_input_name_services("Продажа студии автотест")
+
+    """Продажа парковочного места"""
+    def add_sell_park_place(self):
+        self.click_add_sell()
+        time.sleep(1)
+        self.click_sell_park_place()
+        self.input_input_name_services("Продажа парковочного места автотест")
+
+    """Еда на заказ"""
+    def add_food_delivery(self):
+        self.click_add_food()
+        time.sleep(1)
+        self.click_cake()
+        self.input_input_name_services("Еда на заказ, торты автотест")
+
+    """Заполнение общей формы услуги"""
     def fill_the_form_services(self):
         self.click_button_next_name()
         time.sleep(1)

@@ -23,6 +23,9 @@ class MainPage(BaseClass):
     button_add_services = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup"
 
     #Getters
+    def get_button_add_services(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_add_services)))
+
     def get_button_raiting(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.button_raiting)))
 
@@ -31,6 +34,7 @@ class MainPage(BaseClass):
 
     def get_close_popap_local2(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((AppiumBy.XPATH, self.close_popap_local2)))
+
 
 
     #Actions
@@ -46,9 +50,16 @@ class MainPage(BaseClass):
         self.get_close_popap_local2().click()
         print("Click close_popap_local2")
 
+    def click_button_add_services(self):
+        self.get_button_add_services().click()
+        print("Click button_add_services")
+
 
     #Metods
     def confirm_main_page(self):
         get_hello_text = AppiumBy.XPATH, self.hello_text
         self.assert_element_has_text(get_hello_text, text="Привет")
         print("Привет, сосед!")
+
+    def add_new_service(self):
+        self.click_button_add_services()
