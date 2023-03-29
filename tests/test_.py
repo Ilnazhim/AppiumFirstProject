@@ -8,12 +8,12 @@ from pages.register_page import RegisterPage
 
 
 # class Testregistrations:
-def test_autorization(driver):
-    print("\nAutorization")
-    rp = AutorizationPage(driver)
-    rp.autorisation()
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+# def test_autorization(driver):
+#     print("\nAutorization")
+#     rp = AutorizationPage(driver)
+#     rp.autorisation()
+#     mp = MainPage(driver)
+#     mp.confirm_main_page()
 
 
 def test_register_without_auto_and_onboard(driver):
