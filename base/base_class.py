@@ -31,7 +31,7 @@ class BaseClass:
 
     def assert_element_has_text(self, element, text=None):
         try:
-            WebDriverWait(self.driver, 120).until(EC.presence_of_element_located(element))
+            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(element))
             assert text in self.driver.find_element(*element).text
             return self.driver.find_element(*element)
 

@@ -1,11 +1,10 @@
 from pages.authorization_page import AuthorizationPage
 from pages.help_4_page import Help4Page
 from pages.main import MainPage
-from pages.register_page import RegisterPage
 
 
-def test_send_help_way_house(driver):
-    print("\nTest way to house")
+def test_send_help_get_on_the_way(driver):
+    print("\nTest get on the way")
     rp = AuthorizationPage(driver)
     rp.authorization()
 
@@ -20,21 +19,6 @@ def test_send_help_way_house(driver):
 
     hp = Help4Page(driver)
     hp.open_way_from_house()
-
-
-def test_send_help_way_from_house(driver):
-    print("\nTest way from house")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
-
-    mp = MainPage(driver)
-    mp.click_get_on_the_way()
-
-    hp = Help4Page(driver)
-    hp.open_way_from_house()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
 
 
 def test_search_owner_of_car(driver):
