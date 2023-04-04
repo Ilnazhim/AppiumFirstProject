@@ -1,0 +1,24 @@
+
+start app for test..
+
+Test rent apartment
+Click Enter button
+Input number 89191153292
+Click button_add_services
+Click add_rent
+Click rent_apartment
+Click choose_studia
+input_square
+Click button_next
+input_name_services
+Click button_next_name
+input_description
+Click button_next_desc
+input_price
+Click button_next_price
+Click switch_auto_renewal
+Click send_service
+Click button_service_well_done
+Привет, сосед!
+
+close app..

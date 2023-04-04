@@ -1,0 +1,14 @@
+
+start app for test..
+
+Test search neighbor
+Click Enter button
+Input number 89191153292
+Click search_neighbor
+Input number
+Click button_search_owner
+Сосед найден!
+Click button_close_popap
+Привет, сосед!
+
+close app..

@@ -1,0 +1,8 @@
+
+start app for test..
+
+Authorization
+Click Enter button
+Input number 89191153292
+
+close app..

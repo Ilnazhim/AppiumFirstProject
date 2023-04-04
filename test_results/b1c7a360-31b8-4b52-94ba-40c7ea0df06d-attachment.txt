@@ -1,0 +1,18 @@
+
+start app for test..
+
+Test get on the way
+Click Enter button
+Input number 89191153292
+Click get_on_the_way
+Click way_to_house
+input_station
+Help already was send, please try  in 20 minutes
+Click button_back_to_main_if_error
+Click get_on_the_way
+Click way_from_house
+input_station
+Help already was send, please try  in 20 minutes
+Click button_back_to_main_if_error
+
+close app..

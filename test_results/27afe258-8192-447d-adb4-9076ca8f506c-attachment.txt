@@ -1,0 +1,15 @@
+
+start app for test..
+
+No ZhK form
+Click Enter button
+Input number
+Click Have no my ZhK
+Input name
+Input Mail
+Input Adress
+Input name of ZhK
+Click no_zhk_button_send
+Экосистема SosediService для комфортной жизни
+
+close app..

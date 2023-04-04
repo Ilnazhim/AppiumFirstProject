@@ -1,0 +1,17 @@
+
+start app for test..
+
+Registration
+Click Enter button
+Input number
+Input Town
+Сhoose_town
+Input Street
+Input number of Appartament
+Input Name
+Click button No Auto
+Click button No Onbording
+Click close_popap_otzyv
+Привет, сосед!
+
+close app..

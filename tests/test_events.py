@@ -1,69 +1,56 @@
+from base.base_class import BaseClass
 from pages.authorization_page import AuthorizationPage
-from pages.help_4_page import Help4Page
 from pages.main import MainPage
+from pages.events_page import EventsPage
 
 
-def test_send_help_get_on_the_way(driver):
-    print("\nTest get on the way")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
+class TestEvents:
 
-    mp = MainPage(driver)
-    mp.click_get_on_the_way()
+    def test_send_occ_event(self, driver):
+        print("\nTest OCC event")
+        rp = AuthorizationPage(driver)
+        rp.authorization()
 
-    hp = Help4Page(driver)
-    hp.open_way_to_house()
+        mp = MainPage(driver)
+        mp.click_occ()
 
-    mp = MainPage(driver)
-    mp.click_get_on_the_way()
+        ep = EventsPage(driver)
+        ep.input_name_occ()
+        ep.fill_the_form_events()
 
-    hp = Help4Page(driver)
-    hp.open_way_from_house()
+        mp = MainPage(driver)
+        mp.confirm_main_page()
 
+    def test_send_meet_neighbor_event(self, driver):
+        print("\nTest Meet event")
+        rp = AuthorizationPage(driver)
+        rp.authorization()
 
-def test_search_owner_of_car(driver):
-    print("\nTest cars owner")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
+        mp = MainPage(driver)
+        mp.click_meet_neighbor()
 
-    mp = MainPage(driver)
-    mp.click_search_car()
+        ep = EventsPage(driver)
+        ep.input_name_meet_neighbor()
+        ep.fill_the_form_events()
 
-    hp = Help4Page(driver)
-    hp.open_search_car_owner()
-    hp.neighbor_found()
+        mp = MainPage(driver)
+        mp.confirm_main_page()
 
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+    def test_send_sport_event(self, driver):
+        print("\nTest Sport event")
+        rp = AuthorizationPage(driver)
+        rp.authorization()
 
+        bp = BaseClass(driver)
+        bp.do_scroll()
+        bp.do_scroll()
 
-def test_search_neighbor(driver):
-    print("\nTest search neighbor")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
+        mp = MainPage(driver)
+        mp.click_sport_event()
 
-    mp = MainPage(driver)
-    mp.click_search_neighbor()
+        ep = EventsPage(driver)
+        ep.input_name_sport_event()
+        ep.fill_the_form_events()
 
-    hp = Help4Page(driver)
-    hp.open_search_neighbor()
-    hp.neighbor_found()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
-
-
-def test_loud_noise_neighbor(driver):
-    print("\nTest loud noise")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
-
-    mp = MainPage(driver)
-    mp.click_loud_noise()
-
-    hp = Help4Page(driver)
-    hp.open_search_neighbor()
-    hp.neighbor_loud_noise()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+        mp = MainPage(driver)
+        mp.confirm_main_page()

@@ -1,0 +1,8 @@
+
+start app for test..
+
+Test search neighbor
+Click Enter button
+Input number 89191153292
+
+close app..

@@ -1,0 +1,10 @@
+
+start app for test..
+
+Test agreement
+Click Enter button
+Input number 89191153292
+Click burger_menu
+Click term_use
+
+close app..

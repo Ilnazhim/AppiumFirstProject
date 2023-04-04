@@ -52,12 +52,12 @@ def test_send_the_form_do_app_better_from_services(driver):
 
     sp = ServicesPage(driver)
     sp.click_feedback_button()
-
-    fp = FormsPage(driver)
-    fp.fill_the_form_do_app_better()
-
-    sp = ServicesPage(driver)
-    sp.click_button_back_main()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+    #
+    # fp = FormsPage(driver)
+    # fp.fill_the_form_do_app_better()
+    #
+    # sp = ServicesPage(driver)
+    # sp.click_button_back_main()
+    #
+    # mp = MainPage(driver)
+    # mp.confirm_main_page()

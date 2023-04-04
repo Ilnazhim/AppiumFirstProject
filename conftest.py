@@ -3,6 +3,7 @@ import time
 import pytest
 from appium import webdriver
 
+
 @pytest.fixture(scope="function")
 def driver():
     desired_cap = {

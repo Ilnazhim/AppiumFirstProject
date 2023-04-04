@@ -1,0 +1,14 @@
+
+start app for test..
+
+Test cars owner
+Click Enter button
+Input number 89191153292
+Click search_car
+Input number
+Click button_search_owner
+Сосед найден!
+Click button_close_popap
+Привет, сосед!
+
+close app..

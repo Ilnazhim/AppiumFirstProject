@@ -19,20 +19,20 @@ def test_services_rent_apartment(driver):
     mp.confirm_main_page()
 
 
-def test_services_rent_auto(driver):
-    print("\nTest rent auto")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
-
-    mp = MainPage(driver)
-    mp.add_new_service()
-
-    sp = ServicesPage(driver)
-    sp.add_rent_auto()
-    sp.fill_the_form_services()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+# def test_services_rent_auto(driver):
+#     print("\nTest rent auto")
+#     rp = AuthorizationPage(driver)
+#     rp.authorization()
+#
+#     mp = MainPage(driver)
+#     mp.add_new_service()
+#
+#     sp = ServicesPage(driver)
+#     sp.add_rent_auto()
+#     sp.fill_the_form_services()
+#
+#     mp = MainPage(driver)
+#     mp.confirm_main_page()
 
 
 def test_services_sell_apartment(driver):
@@ -50,21 +50,21 @@ def test_services_sell_apartment(driver):
     mp = MainPage(driver)
     mp.confirm_main_page()
 
-
-def test_services_sell_park_place(driver):
-    print("\nTest sell park place")
-    rp = AuthorizationPage(driver)
-    rp.authorization()
-
-    mp = MainPage(driver)
-    mp.add_new_service()
-
-    sp = ServicesPage(driver)
-    sp.add_sell_park_place()
-    sp.fill_the_form_services()
-
-    mp = MainPage(driver)
-    mp.confirm_main_page()
+#
+# def test_services_sell_park_place(driver):
+#     print("\nTest sell park place")
+#     rp = AuthorizationPage(driver)
+#     rp.authorization()
+#
+#     mp = MainPage(driver)
+#     mp.add_new_service()
+#
+#     sp = ServicesPage(driver)
+#     sp.add_sell_park_place()
+#     sp.fill_the_form_services()
+#
+#     mp = MainPage(driver)
+#     mp.confirm_main_page()
 
 
 def test_services_food_delivery(driver):

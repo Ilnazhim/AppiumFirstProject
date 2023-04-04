@@ -1,0 +1,12 @@
+
+start app for test..
+
+Test onboarding
+Click Enter button
+Input number 89191153292
+Click burger_menu
+Click see_instructions
+Click button See Onbording
+Привет, сосед!
+
+close app..

@@ -1,0 +1,15 @@
+
+start app for test..
+
+Do app better form burger menu
+Click Enter button
+Input number 89191153292
+Click burger_menu
+Click feedback_dev
+Input name
+better_input_email
+better_input_comment
+Click better_button_send
+Привет, сосед!
+
+close app..

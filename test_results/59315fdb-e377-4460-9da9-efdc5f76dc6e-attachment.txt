@@ -1,0 +1,10 @@
+
+start app for test..
+
+Do app better form services
+Click Enter button
+Input number 89191153292
+Click button_add_services
+Click feedback_button
+
+close app..

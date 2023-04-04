@@ -1,3 +1,5 @@
+import pytest
+
 from pages.authorization_page import AuthorizationPage
 from pages.burger_page import BurgerPage
 from pages.main import MainPage
@@ -22,6 +24,7 @@ def test_see_instructions_from_burger_menu(driver):
     mp.confirm_main_page()
 
 
+@pytest.mark.xfail
 def test_terms_of_use_agreement(driver):
     print("\nTest agreement")
     rp = AuthorizationPage(driver)

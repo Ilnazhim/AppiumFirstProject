@@ -1,0 +1,14 @@
+
+start app for test..
+
+Test loud noise
+Click Enter button
+Input number 89191153292
+Click loud_noise
+Input number
+Click button_search_owner
+Ваша просьба сделать потише отправлена соседу
+Click button_well_ad
+Привет, сосед!
+
+close app..
