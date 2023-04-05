@@ -6,3 +6,5 @@ class DataPage:
     adress = "г.Челябинск, Рязанская улица, 20"
     zhk_name = "ЖК Александровский"
     comment_do_app_better_from_burger = "Коммент"
+    main_account = "9191153292"
+    second_account = "9999999999"

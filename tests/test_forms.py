@@ -22,7 +22,7 @@ def test_send_the_form_no_zhk(driver):
 def test_send_the_form_do_app_better_from_burger_menu(driver):
     print("\nDo app better form burger menu")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.open_burger_menu()
@@ -40,7 +40,7 @@ def test_send_the_form_do_app_better_from_burger_menu(driver):
 def test_send_the_form_do_app_better_from_services(driver):
     print("\nDo app better form services")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()

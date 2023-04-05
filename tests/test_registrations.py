@@ -6,7 +6,7 @@ from pages.register_page import RegisterPage
 def test_authorization(driver):
     print("\nAuthorization")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
     mp = MainPage(driver)
     mp.confirm_main_page()
 

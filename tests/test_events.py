@@ -1,3 +1,5 @@
+import time
+
 from base.base_class import BaseClass
 from pages.authorization_page import AuthorizationPage
 from pages.main import MainPage
@@ -6,12 +8,13 @@ from pages.events_page import EventsPage
 
 class TestEvents:
 
-    def test_send_occ_event(self, driver):
+    def test_send_occ_event(self, driver,driver_session):
         print("\nTest OCC event")
         rp = AuthorizationPage(driver)
-        rp.authorization()
+        rp.main_authorization()
 
         mp = MainPage(driver)
+        mp.confirm_main_page()
         mp.click_occ()
 
         ep = EventsPage(driver)
@@ -21,12 +24,13 @@ class TestEvents:
         mp = MainPage(driver)
         mp.confirm_main_page()
 
-    def test_send_meet_neighbor_event(self, driver):
+    def test_send_meet_neighbor_event(self, driver, driver_session):
         print("\nTest Meet event")
         rp = AuthorizationPage(driver)
-        rp.authorization()
+        rp.main_authorization()
 
         mp = MainPage(driver)
+        mp.confirm_main_page()
         mp.click_meet_neighbor()
 
         ep = EventsPage(driver)
@@ -36,16 +40,14 @@ class TestEvents:
         mp = MainPage(driver)
         mp.confirm_main_page()
 
-    def test_send_sport_event(self, driver):
+    def test_send_sport_event(self, driver, driver_session):
         print("\nTest Sport event")
         rp = AuthorizationPage(driver)
-        rp.authorization()
-
-        bp = BaseClass(driver)
-        bp.do_scroll()
-        bp.do_scroll()
+        rp.main_authorization()
 
         mp = MainPage(driver)
+        mp.confirm_main_page()
+        mp.do_scroll()
         mp.click_sport_event()
 
         ep = EventsPage(driver)

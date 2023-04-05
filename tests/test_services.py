@@ -6,7 +6,7 @@ from pages.services_page import ServicesPage
 def test_services_rent_apartment(driver):
     print("\nTest rent apartment")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -38,7 +38,7 @@ def test_services_rent_apartment(driver):
 def test_services_sell_apartment(driver):
     print("\nTest sell apartment")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()
@@ -70,7 +70,7 @@ def test_services_sell_apartment(driver):
 def test_services_food_delivery(driver):
     print("\nTest food delivery")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.add_new_service()

@@ -6,7 +6,7 @@ from pages.main import MainPage
 def test_send_help_get_on_the_way(driver):
     print("\nTest get on the way")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.click_get_on_the_way()
@@ -24,7 +24,7 @@ def test_send_help_get_on_the_way(driver):
 def test_search_owner_of_car(driver):
     print("\nTest cars owner")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.click_search_car()
@@ -40,7 +40,7 @@ def test_search_owner_of_car(driver):
 def test_search_neighbor(driver):
     print("\nTest search neighbor")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.click_search_neighbor()
@@ -56,7 +56,7 @@ def test_search_neighbor(driver):
 def test_loud_noise_neighbor(driver):
     print("\nTest loud noise")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.click_loud_noise()

@@ -10,7 +10,7 @@ class BaseClass:
     def do_scroll(self):
         size = self.driver.get_window_size()
         print("get window size")
-        startx, starty = int(size['width']) * 0.5, int(size['height']) * 0.8
+        startx, starty = int(size['width']) * 0.2, int(size['height']) * 0.8
         print("get start")
         endx, endy = int(size['width']) * 0.5, int(size['height']) * 0.2
         print("get end")

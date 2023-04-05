@@ -116,8 +116,8 @@ class Help4Page(BaseClass):
         with allure.step("way_to_house"):
             try:
                 self.click_way_to_house()
-                self.input_input_station("Нагат")
-                self.click_choose_station()
+                self.input_input_station("Нагатинская")
+                # self.click_choose_station()
                 self.click_button_send_help()
                 self.confirm_main_page_for_helps()
             except TimeoutException:
@@ -128,8 +128,8 @@ class Help4Page(BaseClass):
         with allure.step("way_from_house"):
             try:
                 self.click_way_from_house()
-                self.input_input_station("ленин")
-                self.click_choose_station()
+                self.input_input_station("Чеховская")
+                # self.click_choose_station()
                 self.click_button_send_help()
                 self.confirm_main_page_for_helps()
             except TimeoutException:

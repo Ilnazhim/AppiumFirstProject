@@ -9,7 +9,7 @@ from pages.register_page import RegisterPage
 def test_see_instructions_from_burger_menu(driver):
     print("\nTest onboarding")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.open_burger_menu()
@@ -28,7 +28,7 @@ def test_see_instructions_from_burger_menu(driver):
 def test_terms_of_use_agreement(driver):
     print("\nTest agreement")
     rp = AuthorizationPage(driver)
-    rp.authorization()
+    rp.main_authorization()
 
     mp = MainPage(driver)
     mp.open_burger_menu()
