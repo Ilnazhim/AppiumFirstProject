@@ -8,7 +8,7 @@ from pages.events_page import EventsPage
 
 class TestEvents:
 
-    def test_send_occ_event(self, driver,driver_session):
+    def test_send_occ_event(self, driver):
         print("\nTest OCC event")
         rp = AuthorizationPage(driver)
         rp.main_authorization()
@@ -24,7 +24,7 @@ class TestEvents:
         mp = MainPage(driver)
         mp.confirm_main_page()
 
-    def test_send_meet_neighbor_event(self, driver, driver_session):
+    def test_send_meet_neighbor_event(self, driver):
         print("\nTest Meet event")
         rp = AuthorizationPage(driver)
         rp.main_authorization()
@@ -40,7 +40,7 @@ class TestEvents:
         mp = MainPage(driver)
         mp.confirm_main_page()
 
-    def test_send_sport_event(self, driver, driver_session):
+    def test_send_sport_event(self, driver):
         print("\nTest Sport event")
         rp = AuthorizationPage(driver)
         rp.main_authorization()

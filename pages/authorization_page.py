@@ -39,11 +39,11 @@ class AuthorizationPage(BaseClass):
     def main_authorization(self):
         with allure.step("main authorization"):
             self.click_button_enter()
-            self.input_input_authorization_number(*DataPage.main_account)
+            self.input_input_authorization_number("+79191153292")
             self.click_button_next_1()
 
     def second_authorization(self):
         with allure.step("second authorization"):
             self.click_button_enter()
-            self.input_input_authorization_number(*DataPage.second_account)
+            self.input_input_authorization_number("+79999999999")
             self.click_button_next_1()

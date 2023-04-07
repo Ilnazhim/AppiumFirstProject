@@ -24,7 +24,7 @@ def test_see_instructions_from_burger_menu(driver):
     mp.confirm_main_page()
 
 
-@pytest.mark.xfail
+# @pytest.mark.xfail
 def test_terms_of_use_agreement(driver):
     print("\nTest agreement")
     rp = AuthorizationPage(driver)
